@@ -1,0 +1,14 @@
+{
+  "name": "unit-test-practice-1",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^16.1.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-browserify": "^5.2.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "watchify": "^3.10.0"
+  }
+}
