@@ -1,6 +1,9 @@
 /.settings/
+/.idea/
 /.gradle/
 /build/
 /target/
+/node_modules/
 .project
 /bin/
+/package-lock.json
