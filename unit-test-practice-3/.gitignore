@@ -7,4 +7,5 @@
 .project
 /bin/
 /test-output/
+/coverage/
 /package-lock.json

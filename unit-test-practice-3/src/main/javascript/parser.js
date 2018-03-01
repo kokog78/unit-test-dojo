@@ -77,7 +77,7 @@ module.exports = function() {
             return -1;
         }
         var ok = true;
-        for (i=0; i<part.length; i++) {
+        for (var i=0; i<part.length; i++) {
             switch(part.charAt(i)) {
                 case '0':
                 case '1':
@@ -105,7 +105,7 @@ module.exports = function() {
 
     function isThere(part) {
         var ok = false;
-        for (i=0; i<data.length; i++) {
+        for (var i=0; i<data.length; i++) {
             var line = data[i];
             if (line === part) {
                 ok = true;
