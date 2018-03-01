@@ -6,4 +6,5 @@
 /node_modules/
 .project
 /bin/
+/test-output/
 /package-lock.json
