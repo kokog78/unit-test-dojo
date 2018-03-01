@@ -8,6 +8,11 @@
             "type": "shell",
             "command": "jasmine",
             "group": "test"
+        },
+        {
+            "label": "karma start",
+            "type": "shell",
+            "command": "node node_modules/karma/bin/karma start"
         }
     ]
 }
