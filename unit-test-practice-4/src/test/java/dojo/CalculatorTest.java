@@ -10,7 +10,7 @@ public class CalculatorTest {
 	private Calculator calculator = new Calculator();
 	
 	@Test
-	public void should_throw_exception_for_null() throws Exception {
+	public void should_throw_exception_for_null_input() throws Exception {
 		Throwable ex = catchThrowable(() -> calculator.calculate(null));
 		assertThat(ex).isInstanceOf(NullPointerException.class);
 	}
