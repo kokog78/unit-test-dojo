@@ -3,9 +3,10 @@
 /.gradle/
 /build/
 /target/
-/out/
 /node_modules/
+/out/
 .project
 /bin/
 /test-output/
+/coverage/
 /package-lock.json

@@ -3,6 +3,7 @@
 /.gradle/
 /build/
 /target/
+/out/
 /node_modules/
 .project
 /bin/
