@@ -28,15 +28,15 @@ public class CalculatorTest {
 	}
 	
 	@Test(enabled=false)
-	public void should_return_the_only_integer_input() throws Exception {
-		int result = calculator.calculate("1");
-		assertThat(result).isEqualTo(1);
-	}
-	
-	@Test(enabled=false)
 	public void should_throw_exception_for_non_numeric_input() throws Exception {
 		Throwable ex = catchThrowable(() -> calculator.calculate("a"));
 		assertThat(ex).isInstanceOf(IllegalArgumentException.class);
+	}
+
+	@Test(enabled=false)
+	public void should_return_the_only_integer_input() throws Exception {
+		int result = calculator.calculate("1");
+		assertThat(result).isEqualTo(1);
 	}
 	
 	@Test(enabled=false)
@@ -46,7 +46,7 @@ public class CalculatorTest {
 	}
 	
 	@Test(enabled=false)
-	public void should_add_many_integers() throws Exception {
+	public void should_add_multiple_integers() throws Exception {
 		int result = calculator.calculate("1+2+3+4+5+6");
 		assertThat(result).isEqualTo(21);
 	}
