@@ -46,6 +46,12 @@ public class CalculatorTest {
 	}
 	
 	@Test(enabled=false)
+	public void should_add_three_integers() throws Exception {
+		int result = calculator.calculate("1+2+3");
+		assertThat(result).isEqualTo(6);
+	}
+	
+	@Test(enabled=false)
 	public void should_add_multiple_integers() throws Exception {
 		int result = calculator.calculate("1+2+3+4+5+6");
 		assertThat(result).isEqualTo(21);
@@ -57,6 +63,24 @@ public class CalculatorTest {
 		assertThat(result).isEqualTo(10);
 	}
 	
+	@Test(enabled=false)
+	public void should_handle_leading_plus_sign() throws Exception {
+		int result = calculator.calculate("+1 + 2");
+		assertThat(result).isEqualTo(3);
+	}
+
+	@Test(enabled=false)
+	public void should_handle_leading_minus_sign() throws Exception {
+		int result = calculator.calculate("-1 + 2");
+		assertThat(result).isEqualTo(1);
+	}
+
+	@Test(enabled=false)
+	public void should_handle_leading_plus_and_minus_sign() throws Exception {
+		int result = calculator.calculate("-1 + +2");
+		assertThat(result).isEqualTo(1);
+	}
+
 	@Test(enabled=false)
 	public void should_do_subtraction() throws Exception {
 		int result = calculator.calculate("1 - 2");
