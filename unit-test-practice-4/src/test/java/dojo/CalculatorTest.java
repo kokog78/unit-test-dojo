@@ -30,7 +30,7 @@ public class CalculatorTest {
 	@Test(enabled=false)
 	public void should_throw_exception_for_non_numeric_input() throws Exception {
 		Throwable ex = catchThrowable(() -> calculator.calculate("a"));
-		assertThat(ex).isInstanceOf(IllegalArgumentException.class);
+		assertThat(ex).isInstanceOf(NumberFormatException.class);
 	}
 
 	@Test(enabled=false)
@@ -65,7 +65,7 @@ public class CalculatorTest {
 
 	@Test(enabled=false)
 	public void should_handle_negative_number() throws Exception {
-		int result = calculator.calculate("1 + -2");
-		assertThat(result).isEqualTo(-1);
+		int result = calculator.calculate("1 + -2-1");
+		assertThat(result).isEqualTo(-2);
 	}
 }

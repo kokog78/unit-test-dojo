@@ -60,8 +60,8 @@ describe('Calculator', function() {
         });
 
         xit('should handle negative number', function() {
-            let result = calculator.calculate('1 + -2');
-            expect(result).toBe(-1);
+            let result = calculator.calculate('1 + -2-1');
+            expect(result).toBe(-2);
         });
 
     });
