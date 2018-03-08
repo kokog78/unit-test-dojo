@@ -1,5 +1,8 @@
 package dojo;
 
+import java.io.IOException;
+import java.util.Properties;
+
 import twitter4j.ResponseList;
 import twitter4j.Status;
 import twitter4j.Twitter;
@@ -10,21 +13,27 @@ import twitter4j.auth.AccessToken;
 public class TwitterClient {
 
 	// az alkalmazásunk azonosítója a twitter rendszerében
-	private final String consumerKey = "QPTXwWtdf95xJmgTWNpYiLErU";
+	private final String consumerKey;
 	 
     // az alkalmazásunk jelszava a twitter rendszerében
-	private final String consumerSecret = "jWTBQ6b9iWzrKYV8xxgcIqtkK6jgbLnapABHDdj1DduccifVPA";
+	private final String consumerSecret;
 
     // Access Token
-	private final String accessToken = "918112183963258881-hotTDp71KvvlUWMOoyBrSyyqWSf11kQ";
+	private final String accessToken;
 
     // Access Token Secret
-	private final String accessTokenSecret = "9uW96T9YyX020ZSmfaZt5PmvjG30iVwObRW4nszpzJc3Y";
+	private final String accessTokenSecret;
 
 	private final TwitterFactory twitterFactory;
 	
-	public TwitterClient() {
+	public TwitterClient() throws IOException {
 		twitterFactory = new TwitterFactory();
+		Properties authProps = new Properties();
+		authProps.load(getClass().getResourceAsStream("twitter-auth.properties"));
+		consumerKey = authProps.getProperty("consumerKey");
+		consumerSecret = authProps.getProperty("consumerSecret");
+		accessToken = authProps.getProperty("accessToken");
+		accessTokenSecret = authProps.getProperty("accessTokenSecret");
 	}
 	
 	/**
