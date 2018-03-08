@@ -1,7 +1,9 @@
 {
   "name": "unit-test-practice-1",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "twitter-node-client": "0.0.6"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
