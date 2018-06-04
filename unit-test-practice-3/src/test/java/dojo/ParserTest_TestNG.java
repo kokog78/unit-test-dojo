@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.testng.annotations.Test;
 
-public class ParserTest {
+public class ParserTest_TestNG {
 
 	@Test
 	public void should_do_something() throws Exception {
