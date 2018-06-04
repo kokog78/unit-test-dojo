@@ -1,6 +1,7 @@
 /.settings/
 /.idea/
 /.gradle/
+/dist/
 /build/
 /target/
 /out/
