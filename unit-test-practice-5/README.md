@@ -78,7 +78,7 @@ public void method_should_do_something() {
 ## Typescript
 
 ```typescript
-before('Code', () => {
+describe('Code', () => {
 
   let tested: Code = new Code();
 
