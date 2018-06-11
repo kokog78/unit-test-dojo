@@ -10,8 +10,7 @@ module.exports = function (config) {
 		// list of files / patterns to load in the browser
 		files: [
 			{ pattern: "karma-init.js" },
-            { pattern: "dist/**/*", included: false }, //Only serve but do not include by default (loaded by karma-init.js)
-            { pattern: "data/**/*", included: false } //Only serve but do not include by default (loaded by karma-init.js)
+            { pattern: "dist/**/*", included: false } //Only serve but do not include by default (loaded by karma-init.js)
 		],
 
 		// list of files to exclude
