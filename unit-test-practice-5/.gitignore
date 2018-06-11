@@ -10,3 +10,5 @@
 /test-output/
 /coverage/
 /package-lock.json
+/src/main/java/dojo/PasswordVerifierSolution.java
+/src/test/java/dojo/PasswordVerifierSolutionTest.java
