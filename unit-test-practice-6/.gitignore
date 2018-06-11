@@ -10,3 +10,5 @@
 /test-output/
 /coverage/
 /package-lock.json
+/src/main/java/dojo/RomanNumeralGeneratorSolution.java
+/src/test/java/dojo/RomanNumeralGeneratorSolutionTest.java
