@@ -1,6 +1,7 @@
 /.settings/
 /.idea/
 /.gradle/
+/.grunt/
 /build/
 /target/
 /node_modules/
@@ -10,3 +11,5 @@
 /test-output/
 /coverage/
 /package-lock.json
+/src/**/twitter-auth.properties
+/src/**/twitter-auth.json
