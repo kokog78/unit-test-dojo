@@ -41,7 +41,25 @@ vagy (ha az `npx` parancs nem érhető el):
 node_modules/.bin/tsc --watch
 ```
 
-Fájlok
+Tesztek futtatása:
+
+```
+npx karma start
+```
+
+vagy (ha az `npx` parancs nem érhető el):
+
+```
+node_modules/.bin/karma start --watch
+```
+
+Tesztlefedettség-riport:
+
+```
+coverage/index.html
+```
+
+Fájlok:
 
 ```
 src/main/javascript/parser.js   // a produkciós kód javascript nyelven íródott

@@ -1,12 +1,15 @@
 /.settings/
 /.idea/
 /.gradle/
+/.grunt/
 /build/
 /target/
-/out/
 /node_modules/
+/out/
 .project
 /bin/
+/dist/
 /test-output/
 /coverage/
 /package-lock.json
+/src/**/*Solution*.java

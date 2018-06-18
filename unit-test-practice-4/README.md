@@ -1,15 +1,13 @@
-# Szituáció
+# Feladat
 
-Jelszó ellenőrzésére szolgáló osztályka megírása Test Driven Development (TDD) segítségével.
+Tesztek alapján algoritmus elkészítése.
 
-A `verify(...)` metódus kap egy jelszót, amit ellenőriz.
-Ha az alábbi feltételek közül bármelyik NEM teljesül, akkor hibát/kivételt dob.
+Alaphelyzet: 10 teszt, 1 kivételével az összes ki van kapcsolva.
 
-- A jelszó nem <code>null</code>.</li>
-- A jelszó legalább 8 karakter hosszú.</li>
-- A jelszó tartalmaz legalább egy számot.</li>
-- A jelszó tartalmaz legalább egy kisbetűt.</li>
-- A jelszó tartalmaz legalább egy nagybetűt.</li>
+Lépések:
+ 1. Teszt kielégítése
+ 2. Refaktorálás
+ 3. Következő teszt bekapcsolása
 
 # Projekt előkészítés
 
@@ -19,11 +17,11 @@ IntelliJ: `pom.xml` > Add as Maven Project > ...
 
 Eclipse: Import > Maven > Existing Maven Projects > ...
 
-Fájlok
+Fájlok:
 
 ```
-src/main/java/dojo/PasswordVerifier.java
-src/test/java/dojo/PasswordVerifierTest.java
+src/main/java/dojo/Calculator.java
+src/test/java/dojo/CalculatorTest.java
 ```
 
 ## Typescript
@@ -73,8 +71,8 @@ coverage/index.html
 Fájlok:
 
 ```
-src/main/typescript/password-verifier.ts
-src/test/typescript/password-verifier.spec.ts
+src/main/typescript/calculator.ts
+src/test/typescript/calculator.spec.ts
 ```
 
 # Emlékeztető
