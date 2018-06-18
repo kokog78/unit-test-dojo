@@ -8,8 +8,8 @@
 /out/
 .project
 /bin/
+/dist/
 /test-output/
 /coverage/
 /package-lock.json
-/src/**/twitter-auth.properties
-/src/**/twitter-auth.json
+/src/**/*Solution*.java

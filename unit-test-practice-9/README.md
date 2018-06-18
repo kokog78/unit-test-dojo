@@ -36,3 +36,103 @@ A marsjáró `1 2 E`-ből indulva és a fenti parancsokat végrehajtva `3 3 S`-b
 
 Készítened kell egy programot, ami egy szövegfájlból beolvassa a fentihez hasonló parancsokat, és kiírja a marsjáró befejező
 pocícióját a konzolra.
+
+# Projekt előkészítés
+
+## Java
+
+IntelliJ: `pom.xml` > Add as Maven Project > ...
+
+Eclipse: Import > Maven > Existing Maven Projects > ...
+
+Fájlok:
+
+```
+src/main/java/dojo/MarsRoverNavigation.java
+src/test/java/dojo/MarsRoverNavigationTest.java
+```
+
+## Typescript
+
+NPM frissítése:
+
+```
+npm install npm -g
+```
+
+Projekt függőségek telepítése:
+
+```
+npm install
+```
+
+Folyamatos fordítás:
+
+```
+npx tsc --watch
+```
+
+vagy (ha az `npx` parancs nem érhető el):
+
+```
+node_modules/.bin/tsc --watch
+```
+
+Tesztek futtatása:
+
+```
+npx karma start
+```
+
+vagy (ha az `npx` parancs nem érhető el):
+
+```
+node_modules/.bin/karma start --watch
+```
+
+Tesztlefedettség-riport:
+
+```
+coverage/index.html
+```
+
+Fájlok:
+
+```
+src/main/typescript/mars-rover-navigation.ts
+src/test/typescript/mars-rover-navigation.spec.ts
+```
+
+# Emlékeztető
+
+## Java
+
+```java
+@Test
+public void method_should_do_something() {
+  // given
+  Code tested = ...;
+  // when
+  Object result = tested.method();
+  // then
+  assertThat(result).isNotNull();
+}
+```
+
+## Typescript
+
+```typescript
+describe('Code', () => {
+
+  let tested: Code = new Code();
+
+  it('should do something', () => {
+    // given
+    ...
+    // when
+    let result: any = tested.method();
+    // then
+    expect(result).not.toBeNull();
+  });
+});
+```
