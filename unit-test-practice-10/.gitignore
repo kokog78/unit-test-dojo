@@ -1,0 +1,16 @@
+/.settings/
+/.idea/
+/.gradle/
+/dist/
+/build/
+/target/
+/out/
+/node_modules/
+.project
+/bin/
+/test-output/
+/coverage/
+/package-lock.json
+/unit-test-practice-3.iml
+/src/test/java/dojo/ParserCharacterizationTest.java
+/src/test/javascript/parser-characterization-test.spec.js
