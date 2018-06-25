@@ -19,7 +19,7 @@ szinttel magasabban levőt.
 Példák:
 
 | Paraméter  | Eredmény   |
-+------------+------------+
+| ---------- | ---------- |
 | /a/b/..    | /a         |
 | /a/./b     | /a/b       |
 
@@ -34,7 +34,7 @@ visszaadja. Az első paramétere egy *abszolút* útvonal, a második pedig egy 
 Példák:
 
 | 1. paraméter | 2. paraméter | Eredmény   |
-+--------------+--------------+------------+
+| ------------ | ------------ | ---------- |
 | /a/b         | c            | /a/b/c     |
 | /a/b         | ./c          | /a/b/c     |
 | /a/b         | ../c         | /a/c       |
