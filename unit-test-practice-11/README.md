@@ -16,7 +16,15 @@ Rules to create the result:
 - If a path is in the input file, it should be in the result too, in the same position.
 - If a path is in the template but not in the input file, should be added to the end of the result.
 
-## About the planning
+## Classes
+
+`dojo.GitignoreMergeTool`: this is the tool you will implement.
+
+`dojo.GitignoreMergeToolTest`: here you will write your tests.
+
+## Phases
+
+### Phase #1: planning
 
 Your API depends on the `File` class. It receives a `File` instance. Do you want to mock it or not? If yes, how?
 If not, how will you be able to specify the file content in your tests?
@@ -24,3 +32,16 @@ If not, how will you be able to specify the file content in your tests?
 The template is coming from a java resource, as an `InputStream`. Do you want to mock it or not? If yes, how? If not, why?
 
 What do you think: will you need some support methods in your test class to handle files and templates?
+
+### Phase #2: implementation
+
+Now you implement the tool. Try to write a test before you implement a small addition to your production code!
+Between the code additions, do some refactor - in the prodiction code AND in the test code!
+
+Code coverage with your tests should be 100%.
+
+### Phase #3: extract stream merging tool
+
+Extract a new class which can be used to merge two `InputStream`s together, and write the result into an `OutputStream`!
+Use you tests to support your refactoring - do not write any new tests!
+Before you start the extraction, reshape your original class to have similar methods you will need in the new class!
