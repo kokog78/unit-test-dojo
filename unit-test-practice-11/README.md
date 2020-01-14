@@ -18,9 +18,9 @@ Rules to create the result:
 
 ## Classes
 
-`dojo.GitignoreMergeTool`: this is the tool you will implement.
+`dojo.gitignore.GitignoreMergeTool`: this is the tool you will implement.
 
-`dojo.GitignoreMergeToolTest`: here you will write your tests.
+`dojo.gitignore.GitignoreMergeToolTest`: here you will write your tests.
 
 ## Phases
 
