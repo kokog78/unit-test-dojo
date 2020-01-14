@@ -15,6 +15,7 @@ Rules to create the result:
 
 - If a path is in the input file, it should be in the result too, in the same position.
 - If a path is in the template but not in the input file, should be added to the end of the result.
+- Leading and trailing whitespaces in the paths should be skipped.
 
 ## Classes
 
@@ -48,3 +49,7 @@ Code coverage with your tests should be 100%.
 Extract a new class which can be used to merge two `InputStream`s together, and write the result into an `OutputStream`!
 Use you tests to support your refactoring - do not write any new test!
 Before you start the extraction, reshape your original class to have similar methods you will need in the new class!
+
+### Phase #4: discussion
+
+Now you have a new class which is more general than te original one. Do you need to write tests for that class or not?
