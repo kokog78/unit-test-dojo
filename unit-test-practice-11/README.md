@@ -1,7 +1,7 @@
 # Unit test dojo #11
 
 The task of this dojo is to create a tool (few java classes) with test-first approach.
-Before you start, do some planning about the test.
+Before you start, do some planning about the tests.
 
 ## About the tool
 
@@ -36,12 +36,15 @@ What do you think: will you need some support methods in your test class to hand
 ### Phase #2: implementation
 
 Now you implement the tool. Try to write a test before you implement a small addition to your production code!
-Between the code additions, do some refactor - in the prodiction code AND in the test code!
+Between the code additions, do some refactor - in the production code AND in the test code!
+
+Do NOT build a starship at the beginning. Even if you see that you will need some code later (because you planned it), don't
+create it until you really need it!
 
 Code coverage with your tests should be 100%.
 
 ### Phase #3: extract stream merging tool
 
 Extract a new class which can be used to merge two `InputStream`s together, and write the result into an `OutputStream`!
-Use you tests to support your refactoring - do not write any new tests!
+Use you tests to support your refactoring - do not write any new test!
 Before you start the extraction, reshape your original class to have similar methods you will need in the new class!
