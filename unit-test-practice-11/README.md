@@ -52,4 +52,4 @@ Before you start the extraction, reshape your original class to have similar met
 
 ### Phase #4: discussion
 
-Now you have a new class which is more general than te original one. Do you need to write tests for that class or not?
+Now you have a new class which is more general than the original one. Do you need to write tests for that class or not?
