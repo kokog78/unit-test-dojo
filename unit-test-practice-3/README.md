@@ -14,6 +14,18 @@ IntelliJ: Open > Open as Gradle project
 
 Eclipse: Import > Gradle > Existing Gradle Project
 
+Fordítás parancssorból:
+
+```
+gradlew classes testClasses
+```
+
+vagy:
+
+```
+./gradlew classes testClasses
+```
+
 ### Fájlok
 
 ```

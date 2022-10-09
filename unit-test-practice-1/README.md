@@ -9,10 +9,20 @@ Eclipse: Import > Gradle > Existing Gradle Project
 Fájlok
 
 ```
-src/main/java/dojo/Parser.java
-src/main/resources/dojo/parser.txt
-src/test/java/dojo/ParserTest_JUnit.java   // JUnit tesztekhez
-src/test/java/dojo/ParserTest_TestNG.java  // TestNG tesztekhez
+src/main/java/dojo/StringTemplate.java
+src/test/java/dojo/StringTemplateTest.java
+```
+
+Fordítás parancssorból:
+
+```
+gradlew classes testClasses
+```
+
+vagy:
+
+```
+./gradlew classes testClasses
 ```
 
 # Emlékeztető
