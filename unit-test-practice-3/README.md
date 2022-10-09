@@ -2,11 +2,19 @@
 
 ## Java
 
+### Maven
+
 IntelliJ: `pom.xml` > Add as Maven Project > ...
 
 Eclipse: Import > Maven > Existing Maven Projects > ...
 
-Fájlok
+### Gradle
+
+IntelliJ: Open > Open as Gradle project
+
+Eclipse: Import > Gradle > Existing Gradle Project
+
+### Fájlok
 
 ```
 src/main/java/dojo/Parser.java
