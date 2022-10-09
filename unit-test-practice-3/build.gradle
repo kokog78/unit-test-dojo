@@ -44,4 +44,5 @@ configure(showPitest) {
 dependencies {
     testCompile 'org.testng:testng:6.11'
     testCompile 'org.assertj:assertj-core:3.8.0'
+    testCompile 'junit:junit:4.12'
 }

@@ -3,7 +3,7 @@ package dojo;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class ParserTest_TestNG {
 
