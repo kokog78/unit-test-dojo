@@ -9,3 +9,4 @@
 /bin/
 /test-output/
 /package-lock.json
+/gradle/wrapper/*.jar
