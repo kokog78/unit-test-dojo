@@ -12,4 +12,5 @@
 /test-output/
 /coverage/
 /package-lock.json
+/gradle/wrapper/*.jar
 /src/**/*Solution*.java

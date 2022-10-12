@@ -12,4 +12,5 @@
 /test-output/
 /coverage/
 /package-lock.json
+/.mvn/wrapper/*.jar
 /src/**/*Solution*.java

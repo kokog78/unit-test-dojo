@@ -11,5 +11,6 @@
 /test-output/
 /coverage/
 /package-lock.json
+/gradle/wrapper/*.jar
 /unit-test-practice-3.iml
 /src/**/*Solution*.java
