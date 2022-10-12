@@ -3,3 +3,5 @@
 .project
 .classpath
 /.mvn/wrapper/*.jar
+/gradle/wrapper/*.jar
+

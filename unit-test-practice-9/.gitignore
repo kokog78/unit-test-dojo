@@ -13,4 +13,5 @@
 /coverage/
 /package-lock.json
 /.mvn/wrapper/*.jar
+/gradle/wrapper/*.jar
 /src/**/*Solution*.java

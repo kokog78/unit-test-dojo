@@ -1,0 +1,47 @@
+plugins {
+    id "info.solidsoft.pitest" version "1.2.2"
+    id "java"
+    id "maven"
+}
+
+repositories {
+	mavenCentral()
+    jcenter()
+}
+
+compileJava {
+	options.encoding = "UTF-8"
+}
+
+compileTestJava {
+	options.encoding = "UTF-8"
+}
+
+test {
+     useTestNG {
+         suites "unit-tests.xml"
+     }
+}
+
+pitest {
+	targetClasses = ["$groupId.*"]
+    pitestVersion = "1.2.0" // do not use version below 1.2 - testng support is buggy
+    threads = 4
+    outputFormats = ["XML", "HTML"]
+    timestampedReports = false
+}
+
+task showPitest(type:Exec) {
+	description "Shows PITEST report - only available after you executed 'pitest' task"
+	workingDir "./build/reports/pitest"
+	commandLine "cmd", "/c", "start index.html"
+}
+
+configure(showPitest) {
+	group "results"
+}
+
+dependencies {
+    testCompile 'org.testng:testng:6.11'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+}
