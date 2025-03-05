@@ -1,0 +1,12 @@
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/dojo.GeneratedMSBuildEditorConfig.editorconfig
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/dojo.AssemblyInfoInputs.cache
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/dojo.AssemblyInfo.cs
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/dojo.csproj.CoreCompileInputs.cache
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/dojo.sourcelink.json
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/bin/Debug/net9.0/dojo.deps.json
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/bin/Debug/net9.0/dojo.dll
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/bin/Debug/net9.0/dojo.pdb
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/dojo.dll
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/refint/dojo.dll
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/dojo.pdb
+/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-3/src/main/csharp/dojo/obj/Debug/net9.0/ref/dojo.dll

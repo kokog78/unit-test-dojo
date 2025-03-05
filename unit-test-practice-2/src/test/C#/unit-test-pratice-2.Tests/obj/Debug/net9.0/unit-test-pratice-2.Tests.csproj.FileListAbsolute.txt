@@ -1,6 +1,0 @@
-/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-2/src/test/C#/unit-test-pratice-2.Tests/obj/Debug/net9.0/unit-test-pratice-2.Tests.csproj.AssemblyReference.cache
-/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-2/src/test/C#/unit-test-pratice-2.Tests/obj/Debug/net9.0/unit-test-pratice-2.Tests.GeneratedMSBuildEditorConfig.editorconfig
-/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-2/src/test/C#/unit-test-pratice-2.Tests/obj/Debug/net9.0/unit-test-pratice-2.Tests.AssemblyInfoInputs.cache
-/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-2/src/test/C#/unit-test-pratice-2.Tests/obj/Debug/net9.0/unit-test-pratice-2.Tests.AssemblyInfo.cs
-/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-2/src/test/C#/unit-test-pratice-2.Tests/obj/Debug/net9.0/unit-test-pratice-2.Tests.csproj.CoreCompileInputs.cache
-/home/farkasrm/Asztal/ibello-repos/unit-test-dojo/unit-test-practice-2/src/test/C#/unit-test-pratice-2.Tests/obj/Debug/net9.0/unit-test-pratice-2.Tests.sourcelink.json
