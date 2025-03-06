@@ -4,7 +4,7 @@ using NUnit.Framework;
 using System.Globalization;
 using Dojo;
 
-public class StringTemplateTest
+public class StringTemplateTestDone
 {
     private StringTemplate template;
 

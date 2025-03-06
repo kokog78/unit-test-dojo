@@ -40,3 +40,10 @@ public void method_should_do_something() {
   assertThat(result).isNotNull();
 }
 ```
+
+## C#
+Tesztek futtatásához:
+
+```
+dotnet test src/test/csharp/dojo.Tests
+```

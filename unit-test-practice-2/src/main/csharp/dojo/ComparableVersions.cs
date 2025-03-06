@@ -2,13 +2,12 @@ namespace dojo;
 
 public class ComperableVersions
 {
-
     /**
        * Ezt az osztályt arra szeretnénk majd használni, hogy konfigurációs fájlokban megadott
        * verziószámokkal tudjunk műveleteket megadni. Egyrészről össze szeretnénk hasonlítani
-       * két verziószámot - erre való a {@link #compareTo(ComparableVersion)} metódus.
+       * két verziószámot - erre való a {@link #CompareTo(ComparableVersion)} metódus.
        * Másrészről az egyes verziószámokat engedélyezni vagy tiltani szeretnénk - erre való
-       * a {@link #setEnabled(boolean)} ill. az {@link #isEnabled()} metódus.
+       * a {@link #SetEnabled(boolean)} ill. az {@link #IsEnabled()} metódus.
        */
     public class ComparableVersion : IComparable<ComparableVersion>
     {

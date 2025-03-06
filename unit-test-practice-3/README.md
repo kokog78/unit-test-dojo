@@ -120,3 +120,10 @@ describe('Code', () => {
   });
 });
 ```
+
+## C#
+Tesztek futtatásához:
+
+```
+dotnet test src/test/csharp/dojo.Tests
+```
