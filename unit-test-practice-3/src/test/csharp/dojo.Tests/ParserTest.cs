@@ -4,7 +4,7 @@ namespace dojo.Tests;
 public class ParserTest
 {
     [Test]
-    public void ShouldDoSomething()
+    public void Should_do_something()
     {
         string[] result = { "a", "a", "b" };
 

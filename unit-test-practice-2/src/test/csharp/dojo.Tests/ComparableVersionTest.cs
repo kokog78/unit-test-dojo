@@ -8,7 +8,7 @@ using dojo;
 public class ComparableVersionsTest
 {
     [Test]
-    public void ShouldDoSomething()
+    public void Should_do_something()
     {
         int result = 12;
 

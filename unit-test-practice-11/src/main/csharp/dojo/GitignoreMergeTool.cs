@@ -5,23 +5,24 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 
-/// <summary>
-/// Merges the given .gitignore file with the stored template.
-/// Rules:
-/// <list type="bullet">
-/// <item>Every path specified in the template should be in the result.</item>
-/// <item>If the file already has a path from the template, it should not be added to it.</item>
-/// <item>New paths should be added to the end of the file.</item>
-/// </list>
-/// </summary>
+/**
+ * Merges the given gitignore file with the stored template.
+ * Rules:
+ * <ul>
+ * <li>Every path specified in the template should be in the result.</li>
+ * <li>If the file already has a path from the template, it should not be added to it.</li>
+ * <li>New paths should be added to the end of the file.</li>
+ * </ul>
+ */
 public class GitignoreMergeTool
 {
-    /// <summary>
-    /// Merges the given .gitignore file with the stored template.
-    /// If the file does not exist, it just creates it and copies the template's content into it.
-    /// If the file cannot be created or updated, it throws an IOException.
-    /// </summary>
-    /// <param name="filePath">The path of the file to be merged.</param>
+	/**
+	 * Merges the given gitignore file with the stored template.
+	 * If the file does not exists, it just creates it and copies the template's content into it.
+	 * If the file cannot be created or updated, it throws an {@link IOException}.
+	 * @param file the file to be merged
+	 */
+     
     public void Merge(string filePath)
     {
         //TODO

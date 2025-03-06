@@ -10,6 +10,7 @@ public class SnakeCaseTransformerTest
     [Test]
     public void SampleTest()
     {
+        string result = transformer.transform("");
         Assert.AreEqual(4, 4);
     }
 }
