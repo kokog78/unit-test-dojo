@@ -4,9 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace Dojo;
 
-public class StringTemplate
+public class StringTemplateDone
 {
-    public string Render(string pattern, params object[] parameters)
+    public string? Render(string? pattern, params object?[] parameters)
     {
         if (pattern == null)
             return null; 
@@ -17,7 +17,7 @@ public class StringTemplate
             if (index >= parameters.Length)
                 return match.Value; 
 
-            object value = parameters[index];
+            object? value = parameters[index];
             if (value == null)
                 return "";
 
