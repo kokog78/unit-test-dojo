@@ -16,3 +16,7 @@
 /unit-test-practice-3.iml
 /src/test/java/dojo/ParserCharacterizationTest.java
 /src/test/javascript/parser-characterization-test.spec.js
+/src/main/csharp/dojo/bin/
+/src/main/csharp/dojo/obj/
+/src/test/csharp/dojo.Tests/bin/
+/src/test/csharp/dojo.Tests/obj/
