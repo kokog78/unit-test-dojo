@@ -68,6 +68,6 @@ public void Method_should_do_something()
       // when
       Object result = tested.Method();
       // then
-      Assert.IsNull(result);
+      result.Should().BeNull();
     }
 ```
