@@ -52,7 +52,7 @@ public class StringTemplateTest
         string? result1 = template.Render("pattern ${0}", 0.1f);
         string? result2 = template.Render("pattern ${0}", 123456.12f);
         result1.Should().Be("pattern 0,10");
-        result1.Should().Be("pattern 123456,12");
+        result2.Should().Be("pattern 123456,12");
     }
 
     [Test]
@@ -61,7 +61,7 @@ public class StringTemplateTest
         string? result1 = template.Render("pattern ${0}", new decimal(0.1));
         string? result2 = template.Render("pattern ${0}", new decimal(123456.12));
         result1.Should().Be("pattern 0,10");
-        result1.Should().Be("pattern 123456,12");
+        result2.Should().Be("pattern 123456,12");
     }
 
     [Test]
