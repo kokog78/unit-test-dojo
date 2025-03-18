@@ -5,7 +5,7 @@ using System.Globalization;
 using Dojo;
 using FluentAssertions;
 
-public class StringTemplateTestDone
+public class StringTemplateTest
 {
     private StringTemplate template;
 
