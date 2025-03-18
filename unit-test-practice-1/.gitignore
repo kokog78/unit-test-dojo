@@ -11,4 +11,7 @@
 /package-lock.json
 /.mvn/wrapper/*.jar
 /gradle/wrapper/*.jar
-
+/src/main/csharp/dojo/bin/
+/src/main/csharp/dojo/obj/
+/src/test/csharp/dojo.Tests/bin/
+/src/test/csharp/dojo.Tests/obj/
