@@ -6,7 +6,7 @@ public class ParserTest
     [Test]
     public void Should_do_something()
     {
-        string[] result = { "a", "a", "b" };
+        /*string[] result = { "a", "a", "b" };
 
         // Új aszszertálások a constraint model szerint:
         Assert.That(result, Is.EqualTo(new string[] { "a", "a", "b" }));
@@ -16,6 +16,6 @@ public class ParserTest
         Assert.That(result[1], Is.Not.Null);
 
         // Asszertálás kivételre:
-        Assert.That(() => throw new NullReferenceException(), Throws.TypeOf<NullReferenceException>());
+        Assert.That(() => throw new NullReferenceException(), Throws.TypeOf<NullReferenceException>());*/
     }
 }

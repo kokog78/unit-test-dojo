@@ -1,23 +1,24 @@
-namespace dojo.Tests;
-
+using FluentAssertions;
 using NUnit.Framework;
-using System.Globalization;
+using System;
 using dojo;
 
-[TestFixture]
-public class ComparableVersionsTest
+namespace dojo.Tests
 {
-    [Test]
-    public void Should_do_something()
+    [TestFixture]
+    public class ComparableVersionsTest
     {
-        int result = 12;
-
-        // asszertálás példák:
-        Assert.That(result, Is.EqualTo(12));
-        Assert.That(result, Is.GreaterThan(0));
-        Assert.That(result, Is.GreaterThanOrEqualTo(0));
-        Assert.That(result, Is.Not.EqualTo(0));
-        // asszertálás kivételre:
-        Assert.That(() => throw new NullReferenceException(), Throws.TypeOf<NullReferenceException>());
+        [Test]
+        public void Should_do_something()
+        {
+            int result = 12;
+            result.Should().Be(12);
+            result.Should().BeGreaterThan(0);
+            result.Should().BeGreaterThanOrEqualTo(0);
+            result.Should().NotBe(0);
+            
+            Action act = () => throw new NullReferenceException();
+            act.Should().Throw<NullReferenceException>();
+        }
     }
 }

@@ -19,7 +19,7 @@ public class ComperableVersions
             this.parts = CreateParts(version);
         }
 
-        public int CompareTo(ComparableVersion otherVersion)
+        public int CompareTo(ComparableVersion? otherVersion)
         {
             int limit = Math.Min(parts.Length, otherVersion.parts.Length);
             for (int i = 0; i < limit; i++)
@@ -33,7 +33,7 @@ public class ComperableVersions
             return otherVersion.parts.Length - parts.Length;
         }
 
-        public override bool Equals(object otherObject)
+        public override bool Equals(object? otherObject)
         {
             return (otherObject is ComparableVersion) && CompareTo((ComparableVersion)otherObject) == 0;
         }

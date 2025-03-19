@@ -1,12 +1,23 @@
-    namespace dojo;
+using System;
+using System.IO;
+using System.Text;
 
-    using System.Text;
-    
+namespace dojo
+{
     public class Parser
     {
+
+        private readonly string _resourcePath;
+
+        public Parser()
+        {
+            // Relatív útvonal beállítása
+            _resourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "resources", "parser.txt");
+        }
+
         public string[] Parse(string input)
         {
-            string[] result = new string[3];
+            string?[] result = new string?[3];
             StringBuilder current = new StringBuilder();
             bool lookup = false;
 
@@ -17,23 +28,19 @@
                 {
                     case ' ':
                     case '\t':
-                        lookup = current.Length > 0;
-                        break;
                     case '\n':
                     case '\r':
                         lookup = current.Length > 0;
+                        if (lookup)
+                        {
+                            Update(result, current.ToString());
+                            current.Clear();
+                            lookup = false;
+                        }
                         break;
                     default:
-                        lookup = false;
                         current.Append(currentChar);
                         break;
-                }
-
-                if (lookup)
-                {
-                    Update(result, current.ToString());
-                    current.Clear();
-                    lookup = false;
                 }
             }
 
@@ -51,15 +58,7 @@
             switch (what)
             {
                 case 2:
-                    if (array[2] == null)
-                    {
-                        array[2] = "";
-                    }
-                    if (array[2].Length > 0)
-                    {
-                        array[2] += " ";
-                    }
-                    array[2] += part;
+                    array[2] = (array[2] ?? "") + (array[2]?.Length > 0 ? " " : "") + part;
                     break;
                 case 0:
                     if (array[0] == null)
@@ -68,15 +67,7 @@
                     }
                     else
                     {
-                        if (array[2] == null)
-                        {
-                            array[2] = "";
-                        }
-                        if (array[2].Length > 0)
-                        {
-                            array[2] += " ";
-                        }
-                        array[2] += part;
+                        array[2] = (array[2] ?? "") + (array[2]?.Length > 0 ? " " : "") + part;
                     }
                     break;
                 case 1:
@@ -86,15 +77,7 @@
                     }
                     else
                     {
-                        if (array[2] == null)
-                        {
-                            array[2] = "";
-                        }
-                        if (array[2].Length > 0)
-                        {
-                            array[2] += " ";
-                        }
-                        array[2] += part;
+                        array[2] = (array[2] ?? "") + (array[2]?.Length > 0 ? " " : "") + part;
                     }
                     break;
             }
@@ -102,86 +85,55 @@
 
         private int Lookup(string part)
         {
-            if (part == null)
+            if (string.IsNullOrEmpty(part))
             {
                 return -1;
             }
 
-            bool ok = true;
-            for (int i = 0; i < part.Length; i++)
+            bool isNumeric = true;
+            foreach (char c in part)
             {
-                char currentChar = part[i];
-                switch (currentChar)
+                if (!char.IsDigit(c))
                 {
-                    case '0':
-                    case '1':
-                    case '2':
-                    case '3':
-                    case '4':
-                    case '5':
-                    case '6':
-                    case '7':
-                    case '8':
-                    case '9':
-                        break;
-                    default:
-                        ok = false;
-                        break;
+                    isNumeric = false;
+                    break;
                 }
             }
 
-            if (ok && part.Length == 4)
+            if (isNumeric && part.Length == 4)
             {
                 return 0;
             }
 
-            try
+            if (IsThere(part))
             {
-                if (IsThere(part))
-                {
-                    return 1;
-                }
-            }
-            catch (IOException)
-            {
-                return 2;
+                return 1;
             }
 
             return 2;
         }
 
-        private bool IsThere(string part)
+        public bool IsThere(string part)
         {
-            string path = "parser.txt";
             try
             {
-                using (Stream stream = typeof(Parser).Assembly.GetManifestResourceStream($"Dojo.{path}"))
+                if (File.Exists(_resourcePath))
                 {
-                    if (stream != null)
+                    foreach (var line in File.ReadLines(_resourcePath, Encoding.UTF8))
                     {
-                        bool ok = false;
-                        using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+                        if (line.Trim().Equals(part, StringComparison.OrdinalIgnoreCase))
                         {
-                            string line;
-                            while ((line = reader.ReadLine()) != null)
-                            {
-                                if (line.Equals(part))
-                                {
-                                    ok = true;
-                                }
-                            }
+                            return true;
                         }
-                        return ok;
-                    }
-                    else
-                    {
-                        return false;
                     }
                 }
             }
-            catch (Exception)
+            catch (IOException)
             {
                 return false;
             }
+
+            return false;
         }
     }
+}
