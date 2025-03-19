@@ -12,11 +12,12 @@ public class ComparableVersionsTest
     {
         int result = 12;
 
+        // asszertálás példák:
         Assert.That(result, Is.EqualTo(12));
         Assert.That(result, Is.GreaterThan(0));
         Assert.That(result, Is.GreaterThanOrEqualTo(0));
         Assert.That(result, Is.Not.EqualTo(0));
-
+        // asszertálás kivételre:
         Assert.That(() => throw new NullReferenceException(), Throws.TypeOf<NullReferenceException>());
     }
 }

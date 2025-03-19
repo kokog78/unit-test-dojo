@@ -87,6 +87,22 @@ src/main/javascript/data.js
 src/test/typescript/parser.spec.ts
 ```
 
+## C#
+
+A projekt fordításához egyszer le kell futtatni a teszteket:
+
+```
+cd src\test\csharp\dojo.Tests
+dotnet test
+```
+
+vagy:
+
+```bash
+cd src/test/csharp/dojo.Tests
+dotnet test
+```
+
 # Emlékeztető
 
 ## Java
@@ -122,8 +138,16 @@ describe('Code', () => {
 ```
 
 ## C#
-Tesztek futtatásához:
 
-```
-dotnet test src/test/csharp/dojo.Tests
+```csharp
+[Test]
+public void Method_should_do_something()
+    {
+      // given
+      Code tested = ...;
+      // when
+      Object result = tested.Method();
+      // then
+      result.Should().BeNull();
+    }
 ```

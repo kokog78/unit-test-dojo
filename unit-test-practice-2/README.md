@@ -25,6 +25,22 @@ vagy:
 ./gradlew classes testClasses
 ```
 
+## C#
+
+A projekt fordításához egyszer le kell futtatni a teszteket:
+
+```
+cd src\test\csharp\dojo.Tests
+dotnet test
+```
+
+vagy:
+
+```bash
+cd src/test/csharp/dojo.Tests
+dotnet test
+```
+
 # Emlékeztető
 
 ## Java
@@ -40,10 +56,17 @@ public void method_should_do_something() {
   assertThat(result).isNotNull();
 }
 ```
-
 ## C#
-Tesztek futtatásához:
 
-```
-dotnet test src/test/csharp/dojo.Tests
+```csharp
+[Test]
+public void Method_should_do_something()
+    {
+      // given
+      Code tested = ...;
+      // when
+      Object result = tested.Method();
+      // then
+      result.Should().BeNull();
+    }
 ```
