@@ -89,6 +89,9 @@ src/test/typescript/parser.spec.ts
 
 ## C#
 
+Fájlok:
+src/main/csharp/dojo/resources/parser.txt
+
 A projekt fordításához egyszer le kell futtatni a teszteket:
 
 ```
