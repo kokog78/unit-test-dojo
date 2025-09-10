@@ -2,7 +2,6 @@ package dojo
 
 import java.util.Collections
 import java.util.concurrent.ConcurrentHashMap
-import kotlin.math.min
 
 /**
  * Ezt az osztályt arra szeretnénk majd használni, hogy konfigurációs fájlokban megadott
@@ -11,17 +10,17 @@ import kotlin.math.min
  * Másrészről az egyes verziószámokat engedélyezni vagy tiltani szeretnénk - erre való
  * a [setEnabled] ill. az [isEnabled] metódus.
  */
-class ComparableVersion(version: String) : Comparable<ComparableVersion> {
+class ComparableVersionKt(version: String) : Comparable<ComparableVersionKt> {
 
     companion object {
-        private val enabledVersions = Collections.newSetFromMap(ConcurrentHashMap<ComparableVersion, Boolean>())
+        private val enabledVersions = Collections.newSetFromMap(ConcurrentHashMap<ComparableVersionKt, Boolean>())
     }
 
     private val parts: IntArray = createParts(version)
 
-    override fun compareTo(other: ComparableVersion): Int {
-        val limit = min(parts.size, other.parts.size)
-        for (i in 0 until limit) {
+    override fun compareTo(other: ComparableVersionKt): Int {
+        val limit = Math.min(parts.size, other.parts.size)
+        for (i in 0 .. limit) {
             val currentResult = parts[i] - other.parts[i]
             if (currentResult != 0) {
                 return currentResult
@@ -31,11 +30,11 @@ class ComparableVersion(version: String) : Comparable<ComparableVersion> {
     }
 
     override fun equals(other: Any?): Boolean {
-        return (other is ComparableVersion) && compareTo(other) == 0
+        return (other is ComparableVersionKt) && compareTo(other) == 0
     }
 
     override fun hashCode(): Int {
-        return parts.contentHashCode()
+        return parts.hashCode()
     }
 
     /**
