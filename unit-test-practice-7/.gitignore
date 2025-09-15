@@ -12,6 +12,5 @@
 /coverage/
 /package-lock.json
 /.mvn/wrapper/*.jar
-/gradle/wrapper/*.jar
 /src/**/twitter-auth.properties
 /src/**/twitter-auth.json

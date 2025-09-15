@@ -1,23 +1,25 @@
 package dojo
 
-import org.junit.jupiter.api.Test
 import org.mockito.kotlin.*
 import twitter4j.Status
 import twitter4j.Twitter
+import org.testng.annotations.Test
 
 class TwitterClientKtTest {
+
     @Test
-    fun `how to use mockito`() {
-        // mock létrehozás
+    fun howToUseMockito() {
+        //   mock létrehozás
         val twitterMock = mock<Twitter>()
         val statusMock = mock<Status>()
 
         // konfiguráció
-        whenever(twitterMock.updateStatus(anyString())).thenReturn(statusMock)
+        whenever(twitterMock.updateStatus(any<String>())).thenReturn(statusMock)
 
         twitterMock.updateStatus("teszt")
 
         // ellenőrzés
         verify(twitterMock).updateStatus("teszt")
     }
+
 }
