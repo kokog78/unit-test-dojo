@@ -7,7 +7,7 @@ import org.testng.annotations.Test
 class ComparableVersionKtTest {
 
     @Test
-    fun `should do something`() {
+    fun shouldDoSomething() {
         val result = 12
         // asszertálás példák:
         assertThat(result).isEqualTo(12)
