@@ -12,7 +12,6 @@
 /coverage/
 /package-lock.json
 /.mvn/wrapper/*.jar
-/gradle/wrapper/*.jar
 /unit-test-practice-3.iml
 /src/test/java/dojo/ParserCharacterizationTest.java
 /src/test/javascript/parser-characterization-test.spec.js
