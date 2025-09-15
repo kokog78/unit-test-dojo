@@ -31,9 +31,7 @@ compileTestKotlin {
 
 
 test {
-     useTestNG {
-         suites "unit-tests.xml"
-     }
+    useTestNG()
 }
 
 pitest {
@@ -58,4 +56,5 @@ dependencies {
     testImplementation 'org.testng:testng:7.8.0'
     testImplementation 'org.assertj:assertj-core:3.24.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testRuntimeOnly 'junit:junit:4.13.2'
 }
