@@ -14,3 +14,5 @@
 /.mvn/wrapper/*.jar
 /unit-test-practice-3.iml
 /src/**/*Solution*.java
+/vendor/
+/.phpunit.result.cache
