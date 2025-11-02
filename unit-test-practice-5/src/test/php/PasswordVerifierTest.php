@@ -24,7 +24,7 @@ class PasswordVerifierTest extends TestCase
         // Ezt a kivételt dobó kód ELŐTT kell megtenni.
         $this->expectException(InvalidArgumentException::class);
         // Futtatjuk a kódot, aminek el kell dobnia a kivételt.
-        throw new InvalidArgumentException("A verziónak tartalmaznia kell legalább egy számot.");
+        throw new InvalidArgumentException("A hiba szövege.");
         // Ha a kód eljut idáig (mert nem dobott kivételt), 
         // a PHPUnit a tesztet automatikusan SIKERTELENNEK (Failed) jelöli.
     }
