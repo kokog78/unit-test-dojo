@@ -10,3 +10,5 @@
 /test-output/
 /package-lock.json
 /.mvn/wrapper/*.jar
+/vendor/
+/.phpunit.result.cache
