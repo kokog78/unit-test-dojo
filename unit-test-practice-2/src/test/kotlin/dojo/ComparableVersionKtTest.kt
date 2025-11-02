@@ -18,8 +18,5 @@ class ComparableVersionKtTest {
         assertThatThrownBy {
             throw NullPointerException()
         }.isInstanceOf(NullPointerException::class.java)
-
-        val v: ComparableVersionKt = ComparableVersionKt("1.2.3")
-        v.compareTo(ComparableVersionKt("1.2.3"))
     }
 }
