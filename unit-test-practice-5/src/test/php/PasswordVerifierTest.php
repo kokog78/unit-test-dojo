@@ -16,8 +16,6 @@ class PasswordVerifierTest extends TestCase
         $this->assertGreaterThan(0, $result);
         $this->assertGreaterThanOrEqual(0, $result);
         $this->assertNotEquals(0, $result);
-        $a = new PasswordVerifier();
-
     }
 
     public function testExceptionIsThrown()
