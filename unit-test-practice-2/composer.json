@@ -1,5 +1,5 @@
 {
-    "name": "zolta/unit-test-practice-2",
+    "name": "dojo/unit-test-practice-2",
     "autoload": {
         "psr-4": {
             "App\\": "src/main/php/"
