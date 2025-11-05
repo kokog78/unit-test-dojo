@@ -8,4 +8,9 @@
             <directory>src/test/php</directory>
         </testsuite>
     </testsuites>
+    <source>
+        <include>
+            <directory>src/main/php</directory>
+        </include>
+    </source>
 </phpunit>
