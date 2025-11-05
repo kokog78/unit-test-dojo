@@ -21,7 +21,6 @@ class ComparableVersionTest extends TestCase
         $this->assertGreaterThan(0, $result);
         $this->assertGreaterThanOrEqual(0, $result);
         $this->assertNotEquals(0, $result);
-
     }
 
     public function testExceptionIsThrown()
