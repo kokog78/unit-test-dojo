@@ -14,3 +14,5 @@
 /.mvn/wrapper/*.jar
 /src/**/twitter-auth.properties
 /src/**/twitter-auth.json
+/vendor/
+/.phpunit.result.cache
