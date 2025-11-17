@@ -1,0 +1,121 @@
+# Projekt előkészítés
+
+## PHP
+
+Mielőtt elkezdenéd, a következő eszközökre lesz szükséged a gépeden:
+
+1.  PHP 8.0+
+    * Ellenőrzés: `php -v`
+    * Javaslat (Windows): A legegyszerűbb módja az [XAMPP](https://www.apachefriends.org/hu/index.html) telepítése. Ez automatikusan telepíti a PHP-t. Fontos, hogy ne védett könyvtárba történjen a telepítés. A telepítés után ne felejtsd el hozzáadni a telepítési mappát a Windows `PATH` környezeti változóihoz.
+2.  Composer
+    * Ellenőrzés: `composer -V`
+    * Telepítés: Kövesd a [hivatalos telepítési útmutatót](https://getcomposer.org/download/). Ez a PHP csomagkezelője.
+3.  (Ajánlott) VS Code Kiegészítők
+    * `PHP Intelephense` (a kódkiegészítéshez)
+    * `PHPUnit Test Explorer` (a tesztek grafikus futtatásához)
+
+A projekt klónozása után a PHP függőségeket (pl. a PHPUnit-ot) telepítened kell. A Git nem tárolja ezeket a csomagokat, csak a `composer.json` fájlt, ami leírja, hogy mire van szükség.
+
+1.  Nyiss egy terminált a projekt gyökérmappájában.
+2.  Futtasd a következő parancsot a `vendor` mappa létrehozásához és az összes függőség letöltéséhez:
+
+    ```bash
+    composer install
+    ```
+
+# Emlékeztető
+
+## PHP
+
+A legegyszerűbb és legbiztosabb módja a tesztek futtatásának. A projekt gyökeréből futtasd:
+
+```bash
+# macOS/Linux:
+./vendor/bin/phpunit
+
+# Windows:
+vendor\bin\phpunit
+```
+Vagy ha telepítve van a `PHPUnit Test Explorer` akkor a tesztosztályban lévő play gomb megnyomásával.
+
+# Kódlefedettség Beállítása PHP-hoz
+
+Ahhoz, hogy a PHPUnit kódlefedettségi (coverage) riportokat tudjon generálni, szüksége van egy PHP kiterjesztésre, az **Xdebug**-ra.
+
+### 1. Lépés: A `php.ini` fájl megkeresése
+
+Először meg kell találnod, hogy a parancssor melyik `php.ini` konfigurációs fájlt használja.
+
+1.  Nyiss egy terminált.
+2.  Futtasd a következő parancsot:
+    ```bash
+    php --ini
+    ```
+3.  Keresd meg a `Loaded Configuration File:` sort a kimenetben. Ez megadja a fájl pontos elérési útját (pl. `C:\xampp\php\php.ini`).
+4.  Nyisd meg ezt a fájlt egy szövegszerkesztőben (pl. VS Code).
+
+### 2. Lépés: Az Xdebug Engedélyezése
+
+#### A. Eset: Az Xdebug már szerepel a fájlban (de ki van kapcsolva)
+
+Ez a gyakoribb eset XAMPP telepítéseknél.
+
+1.  Keress rá (Ctrl+F) a `zend_extension=xdebug` (vagy `zend_extension=php_xdebug.dll`) sorra.
+2.  Valószínűleg ki van kommentelve egy pontosvesszővel (`;`) a sor elején:
+    ```ini
+    ;zend_extension=xdebug
+    ```
+3.  Töröld a pontosvesszőt a sor elől, hogy élesítsd:
+    ```ini
+    zend_extension=xdebug
+    ```
+4.  Keress rá az `xdebug.mode` sorra. Ha nincs, add hozzá.
+5.  Állítsd az értékét `coverage`-re:
+    ```ini
+    xdebug.mode = coverage
+    ```
+    *(Tipp: Ha később lépésenkénti hibakeresést (step-debugging) is szeretnél használni, állítsd `debug,coverage`-re.)*
+
+
+#### B. Eset: Az Xdebug nem szerepel a fájlban
+
+Ha a keresés nem ad találatot, manuálisan kell hozzáadnod.
+
+1.  Ellenőrizd, hogy a fájl létezik-e:
+    * Keresd meg a PHP kiterjesztések (extensions) mappáját. Ez általában a `php.ini` mellett, egy `ext` nevű mappában van (pl. `C:\xampp\php\ext\`).
+    * Keresd meg a `php_xdebug.dll` nevű fájlt.
+
+2.  Ha a `php_xdebug.dll` **LÉTEZIK**:
+    * Görgess a `php.ini` fájl legaljára.
+    * Illeszd be a következő sorokat:
+        ```ini
+        [Xdebug]
+        zend_extension=xdebug
+        xdebug.mode = coverage
+        ```
+
+3.  Ha a `php_xdebug.dll` **NEM LÉTEZIK**:
+    * Akkor manuálisan kell letöltened a megfelelő verziót.
+    * Nyisd meg a terminált, és futtasd: `php -i`
+    * Másold ki a teljes kimenetet (az összes szöveget).
+    * Nyisd meg az Xdebug "Varázsló" oldalát: [https://xdebug.org/wizard](https://xdebug.org/wizard)
+    * Illeszd be a kimásolt szöveget a nagy szövegdobozba, és nyomj "Analyse".
+    * Az oldal pontos utasításokat ad: letölti a megfelelő `.dll` fájlt (amit be kell másolnod `php_xdebug.dll` néven az `ext` mappába), és megmondja, mely sorokat kell a `php.ini` végére illesztened.
+    * Győződj meg róla, hogy a `php.ini`-be írt sorok tartalmazzák az `xdebug.mode = coverage` beállítást.
+
+### 3. Lépés: Ellenőrzés
+
+1.  Mentsd el a `php.ini` fájlt.
+2.  Indítsd újra a VS Code-ot és a benne futó terminálokat.
+3.  Nyiss egy új terminált, és futtasd:
+    ```bash
+    php -v
+    ```
+4.  Ha sikeres voltál, a kimenetnek tartalmaznia kell egy plusz sort:
+    ```
+    PHP 8.2.12 (cli) ...
+    Copyright (c) The PHP Group
+    Zend Engine v4.2.12, Copyright (c) Zend Technologies
+        with Xdebug v3.3.1, Copyright (c) 2002-2023, by Derick Rethans
+    ```
+Ha látod a `with Xdebug` sort, a kódlefedettség-mérés működni fog.
