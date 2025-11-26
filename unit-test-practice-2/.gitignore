@@ -12,3 +12,5 @@
 /.mvn/wrapper/*.jar
 /vendor/
 /.phpunit.result.cache
+!.vscode/launch.json
+!.vscode/settings.json
