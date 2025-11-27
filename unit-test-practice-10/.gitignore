@@ -17,3 +17,5 @@
 /src/test/javascript/parser-characterization-test.spec.js
 /vendor/
 /.phpunit.result.cache
+!.vscode/launch.json
+!.vscode/settings.json

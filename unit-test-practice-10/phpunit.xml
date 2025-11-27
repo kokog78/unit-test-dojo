@@ -15,4 +15,10 @@
             <directory>src/main/php</directory>
         </include>
     </source>
+    <coverage>
+        <report>
+            <html outputDirectory="build/coverage"/>
+            <text outputFile="php://stdout"/>
+        </report>
+    </coverage>
 </phpunit>
