@@ -27,7 +27,7 @@ class PasswordVerifier
      * @throws InvalidArgumentException Ha a jelszó érvénytelen.
      * @return void
      */
-    public function verify(?string $password): void {
-       
+    public function verify(?string $password): void {     
+         
     }
 }
