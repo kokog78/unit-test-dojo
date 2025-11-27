@@ -16,3 +16,5 @@
 /src/**/*Solution*.java
 /vendor/
 /.phpunit.result.cache
+!.vscode/launch.json
+!.vscode/settings.json
